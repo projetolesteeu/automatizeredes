@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatização de Redes Sociais</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0a2239, #00111a);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 24px;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    video {
+      width: 100%;
+      display: block;
+    }
+
+    .controls-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .controls-overlay button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .controls-overlay button:hover {
+      color: #ff5733;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 15px 30px;
+      background-color: #ff5733;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .cta-button:hover {
+      background-color: #c44125;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+    }
+
+    .info-section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .info-section p {
+      margin: 10px 0;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aprenda a lucrar mais de 10 mil reais por mês nas redes sociais utilizando inteligência artificial</h1>
+  <div class="video-container">
+    <div class="video-wrapper">
+      <video id="myVideo">
+        <source src="a.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+      <div class="controls-overlay">
+        <!-- Botão Play/Pause -->
+        <button id="playPauseBtn">▶</button>
+        <!-- Botão de Volume -->
+        <button id="volumeBtn">🔊</button>
+      </div>
+    </div>
+    <a href="https://seulink.com" class="cta-button">Eu quero saber mais</a>
+  </div>
+
+  <div class="info-section">
+    <p>✔️ Aprenda a automatizar suas redes sociais (Instagram, YouTube, TikTok e Kwai), gerenciando todas elas com inteligência artificial.</p>
+    <p>✔️ Descubra como criar milhares de conteúdos em poucas horas, aproveitando o poder da automação.</p>
+    <p>✔️ Saiba como faturar mais de 10 mil reais por mês apenas com a monetização das redes sociais.</p>
+    <p>✔️ Automatize comentários e engajamentos em seus vídeos e perfis, aumentando o alcance e a interação com seu público.</p>
+  </div>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const volumeBtn = document.getElementById('volumeBtn');
+    
+    // Toggle play/pause
+    playPauseBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playPauseBtn.textContent = '❚❚'; // Pause icon
+      } else {
+        video.pause();
+        playPauseBtn.textContent = '▶'; // Play icon
+      }
+    });
+
+    // Toggle volume
+    volumeBtn.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        volumeBtn.textContent = '🔊'; // High volume icon
+      } else {
+        video.muted = true;
+        volumeBtn.textContent = '🔇'; // Mute icon
+      }
+    });
+  </script>
+</body>
+</html>
